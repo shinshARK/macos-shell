@@ -1,0 +1,12 @@
+name: macOS Shell via tmate
+
+on:
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  build:
+    runs-on: macos-14 # This is a modern arm64 (Apple Silicon) runner
+
+    steps:
+      - name: Setup tmate SSH session
+        uses: mxschmitt/action-tmate@v3
